@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # GitHub repository configuration
-GITHUB_REPO="git@github.com:altamente-cloud/blog.git"  # Update this with your actual GitHub repo
+GITHUB_REPO="git@github.com:altamente-cloud/blog-ru.git"  # Update this with your actual GitHub repo
 GITHUB_PAGES_BRANCH="ru"                              # Branch for GitHub Pages (Russian)
-CNAME_DOMAIN="yurigolub.com"                          # Custom domain for GitHub Pages
+CNAME_DOMAIN="www.yurigolub.me"                          # Custom domain for GitHub Pages
 BUILD_DIR="dist/ru"
 CONTENT_SOURCE="../ru/content"
 CONFIG_SOURCE="../ru/config.toml"

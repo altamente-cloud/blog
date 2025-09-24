@@ -2,7 +2,7 @@ baseURL = "/"
 languageCode = "ru"
 theme = "hugo-winston-theme"
 themesDir = "themes"
-title = "YuriGolub.Me"
+title = "Yuri's Blog"
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsUseClasses = true
@@ -36,7 +36,6 @@ pygmentsUseClasses = true
   enableGoogleFonts = true 
   googleFontsUrl = "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
   fontFamilyHeading = "Montserrat"
-  fontFamilyHeading = "Montserrat"
   fontFamilyParagraph = "helvetica-cyr"
   fontFamilyBlogContent = "Georgia, serif"
   fontFamilyMonospace = "monospace"
@@ -44,14 +43,13 @@ pygmentsUseClasses = true
   languageSwitcher = true
   
   [[params.languages]]
-    code = "bg"
-    name = "БГ"
-    url = "https://bg.yurigolub.com"
-  
-  [[params.languages]]
     code = "ru"
     name = "RU"
-    url = "https://yurigolub.com"
+    url = "https://www.yurigolub.me"
+  [[params.languages]]
+    code = "bg"
+    name = "БГ"
+    url = "https://bg.yurigolub.me"
 
 # markdown config settings https://gohugo.io/getting-started/configuration-markup/#goldmark
 [taxonomies]
@@ -77,7 +75,7 @@ pygmentsUseClasses = true
     url = '/'
     weight = 1
   [[menu.main]]
-    name = "Статьи"
+    name = "Блог"
     identifier = "blog"
     weight = 2
     url = "/posts/"
@@ -87,7 +85,7 @@ pygmentsUseClasses = true
     weight = 3
     url = "/About/"
   [[menu.main]]
-    name = "По темам"
+    name = "По тегам"
     identifier = "tags"
     weight = 4
     url = "/tags/"

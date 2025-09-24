@@ -1,5 +1,5 @@
 baseURL = "/"
-languageCode = "bg"
+languageCode = "ru"
 theme = "hugo-winston-theme"
 themesDir = "themes"
 title = "Yuri's Blog"
@@ -43,14 +43,13 @@ pygmentsUseClasses = true
   languageSwitcher = true
   
   [[params.languages]]
-    code = "bg"
-    name = "БГ"
-    url = "https://bg.yurigolub.com"
-  
-  [[params.languages]]
     code = "ru"
     name = "RU"
-    url = "https://yurigolub.com"
+    url = "https://www.yurigolub.me"
+  [[params.languages]]
+    code = "bg"
+    name = "БГ"
+    url = "https://bg.yurigolub.me"
 
 # markdown config settings https://gohugo.io/getting-started/configuration-markup/#goldmark
 [taxonomies]
@@ -72,7 +71,7 @@ pygmentsUseClasses = true
 [menu]
   [[menu.main]]
     identifier = 'home'
-    name = 'Начало'
+    name = 'Главная'
     url = '/'
     weight = 1
   [[menu.main]]
@@ -81,12 +80,12 @@ pygmentsUseClasses = true
     weight = 2
     url = "/posts/"
   [[menu.main]]
-    name = "За сайта"
+    name = "О сайте"
     identifier = "about"
     weight = 3
     url = "/About/"
   [[menu.main]]
-    name = "По теми"
+    name = "По тегам"
     identifier = "tags"
     weight = 4
     url = "/tags/"

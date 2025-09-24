@@ -3,7 +3,7 @@ title: Перцептронът - основа на невронните мре�
 slug: perceptron-bg
 lang: bg
 date: 2025-05-23
-description: "Python, Conda, Jupyter - инструменти за работа с ML"
+description: "Перцептронът - основа на невронните мрежи"
 image: images/perceptron/perceptron_header.png
 imageDescription: "Изображение генерирано от ChatGPT"
 imageAltAttribute: Perceptron

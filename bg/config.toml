@@ -45,12 +45,12 @@ pygmentsUseClasses = true
   [[params.languages]]
     code = "bg"
     name = "БГ"
-    url = "https://bg.yurigolub.com"
+    url = "https://bg.yurigolub.me"
   
   [[params.languages]]
     code = "ru"
     name = "RU"
-    url = "https://yurigolub.com"
+    url = "https://www.yurigolub.me"
 
 # markdown config settings https://gohugo.io/getting-started/configuration-markup/#goldmark
 [taxonomies]
