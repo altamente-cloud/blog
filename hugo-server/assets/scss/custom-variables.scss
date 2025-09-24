@@ -1,0 +1,16 @@
+/* Extended CSS Variables for Blog Content Font */
+:root {
+  --font-family-blog-content: {{ .Site.Params.fontFamilyBlogContent | default "Georgia, serif" }};
+}
+
+/* Blog post content font family */
+.page-blog-single .content {
+  font-family: var(--font-family-blog-content);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Override paragraph font for blog posts */
+.page-blog-single .content p {
+  font-family: var(--font-family-blog-content);
+}

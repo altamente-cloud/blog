@@ -2,6 +2,7 @@ mjx-container {
   overflow: scroll !important;
   min-width: inherit !important;
 }
+
 /* Prevent math from affecting paragraph indent */
 .content p:has(mjx-container), 
 .content p:has(.MathJax) {
@@ -17,6 +18,18 @@ mjx-container {
 .content p {
   text-indent: 30px;
   margin-bottom: 1.5rem;
+}
+
+/* Blog post content font family */
+.page-blog-single .content {
+  font-family: Georgia, serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Override paragraph font for blog posts */
+.page-blog-single .content p {
+  font-family: Georgia, serif;
 }
 
 /* Headings spacing */

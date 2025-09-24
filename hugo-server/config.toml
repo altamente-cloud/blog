@@ -1,8 +1,8 @@
 baseURL = "/"
-languageCode = "en-us"
+languageCode = "bg"
 theme = "hugo-winston-theme"
 themesDir = "themes"
-title = "learn.altamente.cloud"
+title = "Yuri's Blog"
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsUseClasses = true
@@ -37,8 +37,20 @@ pygmentsUseClasses = true
   googleFontsUrl = "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
   fontFamilyHeading = "Montserrat"
   fontFamilyParagraph = "helvetica-cyr"
+  fontFamilyBlogContent = "Georgia, serif"
   fontFamilyMonospace = "monospace"
   math = true
+  languageSwitcher = true
+  
+  [[params.languages]]
+    code = "bg"
+    name = "БГ"
+    url = "https://bg.yurigolub.com"
+  
+  [[params.languages]]
+    code = "ru"
+    name = "RU"
+    url = "https://yurigolub.com"
 
 # markdown config settings https://gohugo.io/getting-started/configuration-markup/#goldmark
 [taxonomies]
@@ -64,7 +76,7 @@ pygmentsUseClasses = true
     url = '/'
     weight = 1
   [[menu.main]]
-    name = "Статии"
+    name = "Блог"
     identifier = "blog"
     weight = 2
     url = "/posts/"
@@ -74,7 +86,7 @@ pygmentsUseClasses = true
     weight = 3
     url = "/About/"
   [[menu.main]]
-    name = "По теми"
+    name = "По теми"
     identifier = "tags"
     weight = 4
     url = "/tags/"

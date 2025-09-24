@@ -3,6 +3,7 @@
 # GitHub repository configuration
 GITHUB_REPO="git@github.com:altamente-cloud/blog.git"  # Update this with your actual GitHub repo
 GITHUB_PAGES_BRANCH="ru"                              # Branch for GitHub Pages (Russian)
+CNAME_DOMAIN="yurigolub.com"                          # Custom domain for GitHub Pages
 BUILD_DIR="dist/ru"
 CONTENT_SOURCE="../ru/content"
 CONFIG_SOURCE="../ru/config.toml"
@@ -36,8 +37,8 @@ cleanup() {
         print_status "Removed symlink"
     fi
     # Restore original config if backup exists
-    if [ -f "$HUGO_DIR/config.toml.backup."* ]; then
-        LATEST_BACKUP=$(ls -t "$HUGO_DIR"/config.toml.backup.* | head -1)
+    if ls "$HUGO_DIR"/config.toml.backup.* 1> /dev/null 2>&1; then
+        LATEST_BACKUP=$(ls -t "$HUGO_DIR"/config.toml.backup.* 2>/dev/null | head -1)
         if [ -f "$LATEST_BACKUP" ]; then
             cp "$LATEST_BACKUP" "$HUGO_DIR/config.toml"
             print_status "Restored original config.toml"
@@ -103,12 +104,27 @@ fi
 
 # Step 2: Build Hugo site
 print_status "Step 2: Building Hugo site..."
-hugo --destination "../$BUILD_DIR" --minify
+
+# Clear Hugo's generated resources to ensure fresh CSS compilation
+if [ -d "resources/_gen" ]; then
+    rm -rf "resources/_gen"
+    print_status "Cleared Hugo generated resources cache"
+fi
+
+hugo --destination "../$BUILD_DIR" --minify --cleanDestinationDir
 if [ $? -eq 0 ]; then
     print_status "Hugo build completed successfully"
 else
     print_error "Hugo build failed"
     exit 1
+fi
+
+# Step 2.5: Create CNAME file for custom domain
+if [ ! -z "$CNAME_DOMAIN" ]; then
+    print_status "Step 2.5: Creating CNAME file for custom domain..."
+    cd "$SCRIPT_DIR/$BUILD_DIR"
+    echo "$CNAME_DOMAIN" > CNAME
+    print_status "Created CNAME file with domain: $CNAME_DOMAIN"
 fi
 
 # Step 3: Deploy to GitHub Pages
@@ -131,10 +147,11 @@ print_status "Pulling latest changes from $GITHUB_PAGES_BRANCH branch..."
 git fetch origin
 git checkout -B "$GITHUB_PAGES_BRANCH"
 
-# Check if we need to pull existing content
+# Check if we need to pull existing content and clean for fresh deployment
 if git ls-remote --heads origin | grep -q "$GITHUB_PAGES_BRANCH"; then
-    git reset --hard "origin/$GITHUB_PAGES_BRANCH"
-    print_status "Reset to latest $GITHUB_PAGES_BRANCH branch"
+    # Reset to remote branch to get proper git history but keep working directory
+    git reset --soft "origin/$GITHUB_PAGES_BRANCH"
+    print_status "Reset git history to latest $GITHUB_PAGES_BRANCH branch"
 else
     print_status "Creating new $GITHUB_PAGES_BRANCH branch"
 fi
@@ -152,7 +169,7 @@ else
     git push -u origin "$GITHUB_PAGES_BRANCH" --force
     if [ $? -eq 0 ]; then
         print_status "Successfully deployed to GitHub Pages!"
-        print_status "Your site should be available at: https://altamente-cloud.github.io/blog/"
+        print_status "Your site should be available at: https://$CNAME_DOMAIN"
     else
         print_error "Failed to push to GitHub"
         exit 1

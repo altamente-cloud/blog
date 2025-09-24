@@ -36,7 +36,9 @@ pygmentsUseClasses = true
   enableGoogleFonts = true 
   googleFontsUrl = "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
   fontFamilyHeading = "Montserrat"
+  fontFamilyHeading = "Montserrat"
   fontFamilyParagraph = "helvetica-cyr"
+  fontFamilyBlogContent = "Georgia, serif"
   fontFamilyMonospace = "monospace"
   math = true
   languageSwitcher = true
