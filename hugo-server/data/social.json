@@ -1,0 +1,14 @@
+{
+  "links": [
+    {
+      "name": "twitter",
+      "url": "https://x.com/altamnt",
+      "image": "images/social/twitter.svg"
+    },
+    {
+      "name": "linkedin",
+      "url": "https://www.linkedin.com/in/yuri-golub-58492435/",
+      "image": "images/social/linkedin.svg"
+    }
+  ]
+}

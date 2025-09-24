@@ -1,0 +1,56 @@
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<script>
+    MathJax = {
+        tex: {
+            displayMath: [['\\[', '\\]'], ['$$', '$$']],  // block
+            inlineMath: [['\\(', '\\)']],                 // inline
+            packages: { '[+]': ['unicode'] }               // enable unicode support
+        },
+        loader: {
+            load: ['ui/safe', '[tex]/unicode']
+        },
+        svg: {
+            scale: 1,
+            minScale: 0.5,
+            mtextInheritFont: true,                       // use surrounding font for text
+            merrorInheritFont: true,                      // use surrounding font for errors
+            mathmlSpacing: false,                         // better spacing
+            skipAttributes: {},                           // render all attributes
+            exFactor: 0.5,                               // ex height factor
+            displayAlign: 'center',
+            displayIndent: '0',
+            fontCache: 'local'                            // save fonts locally for better mobile performance
+        },
+        options: {
+            enableMenu: true,                             // enable context menu
+            renderActions: {
+                addMenu: [0, '', '']                      // disable the menu button on mobile
+            }
+        },
+        startup: {
+            pageReady: () => {
+                return MathJax.startup.defaultPageReady().then(() => {
+                    // Add class to parent elements for better styling
+                    document.querySelectorAll('mjx-container').forEach(el => {
+                        if (el.hasAttribute('display')) {
+                            el.classList.add('math-display');
+                        } else {
+                            el.classList.add('math-inline');
+                        }
+                    });
+                });
+            }
+        }
+    };
+</script>
+<style>
+    /* Improve spacing between Cyrillic text and math */
+    .MathJax {
+        margin: 0 0.15em;
+    }
+
+    /* Ensure SVG text inherits surrounding font */
+    .MathJax[jax="SVG"] text {
+        font-family: inherit;
+    }
+</style>

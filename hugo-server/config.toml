@@ -1,0 +1,80 @@
+baseURL = "/"
+languageCode = "en-us"
+theme = "hugo-winston-theme"
+themesDir = "themes"
+title = "learn.altamente.cloud"
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsUseClasses = true
+
+[pagination]
+  pagerSize = 5
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.55.0"
+
+[params]
+  google_analytics_id = ""
+  twitter_handle = "@zerostaticio"
+  showAuthorOnHomepage = true
+  showAuthorOnPosts = false
+  showIntroContentOnHomepage = true
+  showPostsOnHomepage = false
+  usePaginationOnHomepage = false
+  limitPostsOnHomepage = 3 # only used if usePaginationOnHomepage is false
+  sortPostsByDateOldestFirst = false
+  addDot = true
+  addFrame = true
+  highlightColor = "black"
+  baseColor = "#ffffff"
+  baseOffsetColor = "#eaeaea"
+  headingColor = "#1c1b1d"
+  textColor = "#4e5157"
+  dotColor = "red"
+  enableGoogleFonts = true 
+  googleFontsUrl = "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+  fontFamilyHeading = "Montserrat"
+  fontFamilyParagraph = "helvetica-cyr"
+  fontFamilyMonospace = "monospace"
+  math = true
+
+# markdown config settings https://gohugo.io/getting-started/configuration-markup/#goldmark
+[taxonomies]
+  tag = "tags"
+
+[markup]
+  defaultMarkdownHandler = 'goldmark'
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      hardWraps = true
+      unsafe = true
+      xhtml = false
+    [markup.goldmark.extensions.passthrough]
+      enable = true
+      [markup.goldmark.extensions.passthrough.delimiters]
+        block = [['\[', '\]'], ['$$', '$$']]
+        inline = [['\(', '\)']]
+
+[menu]
+  [[menu.main]]
+    identifier = 'home'
+    name = 'Начало'
+    url = '/'
+    weight = 1
+  [[menu.main]]
+    name = "Статии"
+    identifier = "blog"
+    weight = 2
+    url = "/posts/"
+  [[menu.main]]
+    name = "За сайта"
+    identifier = "about"
+    weight = 3
+    url = "/About/"
+  [[menu.main]]
+    name = "По теми"
+    identifier = "tags"
+    weight = 4
+    url = "/tags/"

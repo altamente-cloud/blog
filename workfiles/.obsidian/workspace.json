@@ -1,0 +1,189 @@
+{
+  "main": {
+    "id": "17107b48eaa9039f",
+    "type": "split",
+    "children": [
+      {
+        "id": "63ce548bdf771924",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b26f594d689694f2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "perceptron-ru.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "perceptron-ru"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1f8375c995cf5417",
+    "type": "split",
+    "children": [
+      {
+        "id": "57fdd56e74772c0f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ced6a22c8d8de971",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "f6f4b7e1edac9291",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "8116f6b0217dd331",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "785213d1c3a33e0a",
+    "type": "split",
+    "children": [
+      {
+        "id": "faaba23e3743bc13",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "554cde609cc370f7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "posts/conda-bg.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for conda-bg"
+            }
+          },
+          {
+            "id": "6eb294765f744e33",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "posts/conda-bg.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from conda-bg"
+            }
+          },
+          {
+            "id": "9532b5b54a57eff6",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "5aa106e840126a9b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "posts/conda-bg.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of conda-bg"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "b26f594d689694f2",
+  "lastOpenFiles": [
+    "posts/for_reference/destruction-of-words.md",
+    "posts/for_reference/sanity-not-statistical.md",
+    "posts/for_reference/language-perfect.md",
+    "posts/for_reference/controls-the-past.md",
+    "posts/_index.md",
+    "posts/bayes.md",
+    "posts/conda-bg.md",
+    "posts/formatted_bayes_md.md",
+    "posts/conda-ru.md",
+    "ggml-ru.md",
+    "perceptron-ru.md",
+    "author_large.png",
+    "bayes_bg copy.md",
+    "Untitled-2025-05-17-1403.png"
+  ]
+}
