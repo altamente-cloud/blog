@@ -12,6 +12,12 @@ mjx-container {
 /* Basic menu styling */
 .menu-main > ul > li > a {
   white-space: nowrap;
+  padding:5px;
+}
+
+.menu-main > ul > li.active > a {
+  color: white;
+  background-color: black;
 }
 
 /* Content spacing */
