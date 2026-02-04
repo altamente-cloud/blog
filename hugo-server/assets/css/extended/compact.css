@@ -1,5 +1,27 @@
 /* Compact theme overrides */
 
+/* Fix header alignment when language switcher is disabled */
+.language-switcher:empty {
+  display: none;
+}
+
+/* Simple header layout - logo then menu */
+.header {
+  justify-content: flex-start;
+}
+
+/* Keep hamburger on right side for mobile */
+.hamburger-trigger {
+  margin-left: auto;
+}
+
+/* On desktop, hide hamburger since menu is visible */
+@media (min-width: 992px) {
+  .hamburger-trigger {
+    display: none;
+  }
+}
+
 /* Reduce body padding */
 body {
   padding: 15px !important;

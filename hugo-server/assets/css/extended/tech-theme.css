@@ -1,0 +1,199 @@
+/* Ascetic Tech Blog Theme */
+
+/* Tech aesthetic fonts */
+body {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Mono', 'Droid Sans Mono', 'Source Code Pro', monospace !important;
+  --font-family-heading: 'SF Mono', 'Monaco', 'Inconsolata', monospace !important;
+  --font-family-paragraph: 'SF Mono', 'Monaco', 'Inconsolata', monospace !important;
+  --font-family-monospace: 'SF Mono', 'Monaco', 'Inconsolata', monospace !important;
+}
+
+/* Minimal color scheme */
+:root {
+  --base-color: #ffffff !important;
+  --text-color: #24292e !important;
+  --heading-color: #24292e !important;
+  --highlight-color: #0366d6 !important;
+  --base-offset-color: #f6f8fa !important;
+  --dot-color: #0366d6 !important;
+}
+
+/* Clean, minimal links */
+a {
+  color: #0366d6 !important;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Remove frames and fancy elements */
+body.frame {
+  border: none !important;
+}
+
+/* Simple, minimal header */
+.header {
+  border-bottom: 1px solid #e1e4e8;
+  padding-bottom: 15px;
+  margin-bottom: 30px !important;
+}
+
+a.header-logo {
+  text-decoration: none;
+  color: var(--heading-color);
+  font-weight: 600;
+}
+
+/* Minimal menu styling */
+.menu-main > ul > li > a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.menu-main > ul > li > a:hover {
+  color: var(--highlight-color);
+}
+
+.menu-main > ul > li.active > a {
+  color: var(--highlight-color);
+  font-weight: 600;
+  background: #f1f8ff;
+  border-radius: 3px;
+}
+
+/* Code-like headings */
+.content h1,
+.content h2,
+.content h3,
+.intro h1,
+.intro h2,
+.summary-title {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace !important;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+/* Clean, readable content */
+.content p,
+.intro p,
+.summary p,
+.content li,
+.intro li,
+.summary li {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace !important;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  color: #586069;
+}
+
+.content ul,
+.content ol {
+  margin-left: 20px;
+}
+
+.content li {
+  margin-bottom: 8px;
+}
+
+/* Minimal blockquotes */
+.content blockquote {
+  border-left: 3px solid #dfe2e5;
+  margin: 20px 0 !important;
+  padding: 0 15px !important;
+  color: #6a737d;
+}
+
+.content blockquote p {
+  color: #6a737d;
+}
+
+/* GitHub-style code blocks */
+.highlight pre {
+  background: #f6f8fa !important;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 16px !important;
+  font-size: 14px !important;
+  line-height: 1.45;
+  overflow: auto;
+}
+
+/* Inline code */
+.content code,
+p code,
+li code {
+  background: rgba(27, 31, 35, 0.05);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  padding: 0.2em 0.4em;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace !important;
+}
+
+/* Minimal summary cards */
+.summary {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.summary:last-child {
+  border-bottom: none;
+}
+
+/* Minimal footer */
+.footer {
+  border-top: 1px solid #e1e4e8;
+  margin-top: 40px !important;
+  padding-top: 20px;
+  color: #6a737d;
+  font-size: 14px;
+}
+
+/* Remove dots and fancy decorations */
+.dot {
+  display: none;
+}
+
+/* Simple date styling */
+.summary-date {
+  color: #6a737d;
+  font-size: 14px;
+}
+
+/* Minimal tag styling - unified for all tag locations */
+.tags .tag,
+.tag a,
+.tag-cloud-item,
+.summary-tag,
+a.tag {
+  color: #24292e !important;
+  text-decoration: none !important;
+  font-size: 14px;
+  background: #e1e4e8;
+  padding: 2px 8px;
+  border-radius: 3px;
+  display: inline-block;
+  border: 1px solid #d1d5da;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+/* Tag hover state */
+.tags .tag:hover,
+.tag a:hover,
+.tag-cloud-item:hover,
+.summary-tag:hover,
+a.tag:hover {
+  color: #24292e !important;
+  text-decoration: none !important;
+  background: #d1d5da;
+}
+
+/* Tag containers */
+.summary-tags,
+.tags {
+  margin-bottom: 10px;
+}
