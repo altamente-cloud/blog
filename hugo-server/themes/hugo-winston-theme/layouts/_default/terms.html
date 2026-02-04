@@ -1,0 +1,35 @@
+{{ define "body_classes" }}page-default-list{{ end }}
+
+{{ define "main" }}
+<div class="intro">
+    <h1>{{ .Title }}{{ if .Site.Params.addDot }}<span class="dot">.</span>{{ end }}</h1>
+</div>
+
+<div class="tag-cloud">
+    {{/* Get the maximum posts count for any tag */}}
+    {{ $maxCount := 1 }}
+    {{ range .Data.Terms.ByCount }}
+    {{ if gt .Count $maxCount }}
+    {{ $maxCount = .Count }}
+    {{ end }}
+    {{ end }}
+
+    {{/* Display all tags with size relative to their count */}}
+    {{ range .Data.Terms.ByCount }}
+    {{ $count := .Count }}
+    {{ $sizeClass := "" }}
+    {{ if eq $count $maxCount }}
+    {{ $sizeClass = "largest" }}
+    {{ else if gt $count (div $maxCount 2) }}
+    {{ $sizeClass = "large" }}
+    {{ else if gt $count (div $maxCount 3) }}
+    {{ $sizeClass = "medium" }}
+    {{ else }}
+    {{ $sizeClass = "small" }}
+    {{ end }}
+    <a href="{{ "/tags/" | relLangURL }}{{ .Name | urlize }}" class="tag-cloud-item {{ $sizeClass }}">
+        {{ .Name }} <span class="count">({{ $count }})</span>
+    </a>
+    {{ end }}
+</div>
+{{ end }}

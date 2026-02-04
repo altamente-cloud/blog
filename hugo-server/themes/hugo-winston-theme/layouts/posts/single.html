@@ -1,0 +1,39 @@
+{{ define "body_classes" }}page-blog-single{{ end }}
+
+{{ define "main" }}
+<div class="blog">
+  {{ if .Site.Params.showAuthorOnPosts }}
+  {{ partial "author.html" . }}
+  {{ end }}
+  <div class="intro">
+    <h1>{{ .Title }}{{ if .Site.Params.addDot }}<span class="dot">.</span>{{ end }}</h1>
+    {{ if .Params.image }}
+    <img alt="{{.Params.imageAltAttribute | default " Article hero image"}}" src="{{ .Params.image | relURL }}" />
+    {{ if .Params.imageDescription }}
+    <p class="image-description">{{ .Params.imageDescription }}</p>
+    {{ end }}
+    {{ end }}
+  </div>
+  {{ if .Params.tags }}
+  <div class="tags">
+    {{ range .Params.tags }}
+    <a href="{{" /tags/"|relLangURL}}{{. | urlize}}" class="tag">{{.}}</a>
+    {{ end }}
+  </div>
+  {{ end }}
+  <div class="content">
+    {{ .Content }}
+  </div>
+</div>
+<!--Comments section with separator-->
+<div id="comments" class="comments" style ="margin-top: 50px; padding-top: 20px; border-top: 1px solid #eaeaea;">
+
+<script src="https://utteranc.es/client.js"
+      repo="altamente-cloud/blog-ru"
+      issue-term="pathname"
+      theme="github-light"
+      crossorigin="anonymous"
+      async>
+</script>
+</div>
+{{ end }}
