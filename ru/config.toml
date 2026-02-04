@@ -80,3 +80,8 @@ pygmentsUseClasses = true
     identifier = "tags"
     weight = 4
     url = "/tags/"
+# Sitemap configuration
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 0.5
