@@ -40,16 +40,7 @@ pygmentsUseClasses = true
   fontFamilyBlogContent = "Georgia, serif"
   fontFamilyMonospace = "monospace"
   math = true
-  languageSwitcher = true
-  
-  [[params.languages]]
-    code = "ru"
-    name = "RU"
-    url = "https://www.yurigolub.me"
-  [[params.languages]]
-    code = "bg"
-    name = "БГ"
-    url = "https://bg.yurigolub.me"
+  languageSwitcher = false
 
 # markdown config settings https://gohugo.io/getting-started/configuration-markup/#goldmark
 [taxonomies]

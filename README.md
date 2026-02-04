@@ -1,6 +1,8 @@
 # Hugo Build and Deploy Scripts
 
-This repository contains build scripts for deploying multilingual Hugo sites to GitHub Pages, plus a development server script for local testing.
+This repository contains build scripts for deploying a Hugo site to GitHub Pages, plus a development server script for local testing.
+
+**Note:** Bulgarian version is currently disabled. Only Russian version is active.
 
 ## Setup
 
@@ -28,8 +30,8 @@ Starts a local Hugo development server for the specified language.
 ```
 
 **Languages:**
-- `bg` - Bulgarian version
-- `ru` - Russian version
+- `ru` - Russian version (active)
+- `bg` - Bulgarian version (disabled)
 
 **What it does:**
 1. Creates symlink from language content folder to `hugo-server/content`
@@ -39,7 +41,6 @@ Starts a local Hugo development server for the specified language.
 
 **Examples:**
 ```bash
-./serve.sh bg    # Serve Bulgarian site at http://localhost:1313
 ./serve.sh ru    # Serve Russian site at http://localhost:1313
 ```
 
@@ -49,22 +50,6 @@ Starts a local Hugo development server for the specified language.
 - **Future posts**: Shows future-dated posts with `--buildFuture`
 - **Network access**: Binds to `0.0.0.0` for access from other devices
 - **Automatic cleanup**: Restores original config and removes symlinks on exit
-
-### `build-bg.sh` - Bulgarian Site Build and Deploy
-Builds and deploys the Bulgarian version of the site.
-
-**What it does:**
-0. Cleans the build directory (`dist/bg`)
-1. Creates a symlink from `bg/content` folder to `hugo-server/content`
-2. Copies `bg/config.toml` to `hugo-server/config.toml`
-3. Builds the Hugo site to `dist/bg`
-4. Deploys the site to GitHub Pages (`bg` branch)
-5. Removes symlinks and restores original config
-
-**Usage:**
-```bash
-./build-bg.sh
-```
 
 ### `build-ru.sh` - Russian Site Build and Deploy
 Builds and deploys the Russian version of the site.
@@ -84,24 +69,25 @@ Builds and deploys the Russian version of the site.
 
 ## Directory Structure
 ```
-├── bg/                           # Bulgarian version
+├── bg/                           # Bulgarian version (disabled)
 │   ├── content/                  # Bulgarian content files
 │   │   ├── _index.md
 │   │   ├── pages/
 │   │   └── posts/
 │   └── config.toml              # Bulgarian-specific config
-├── ru/                          # Russian version
+├── ru/                          # Russian version (active)
 │   ├── content/                 # Russian content files
 │   └── config.toml             # Russian-specific config
 ├── hugo-server/                # Hugo site configuration
 │   ├── config.toml            # Base config (backed up/restored)
 │   ├── themes/
-│   └── ...
+│   │   └── hugo-winston-theme/ # Winston theme files
+│   └── assets/
+│       └── css/extended/       # Custom CSS overrides
+│           └── compact.css     # Compact theme overrides
 ├── dist/                       # Build output (created by scripts)
-│   ├── bg/                    # Bulgarian build
 │   └── ru/                    # Russian build
 ├── serve.sh                   # Development server script
-├── build-bg.sh               # Bulgarian build script
 └── build-ru.sh               # Russian build script
 ```
 
@@ -119,26 +105,11 @@ Builds and deploys the Russian version of the site.
 - **URL notification**: Shows the GitHub Pages URL after successful deployment
 
 ### GitHub Pages Configuration
-- **Bulgarian site**: Deployed to `bg` branch
-- **Russian site**: Deployed to `ru` branch
+- **Russian site**: Deployed to `ru` branch of `git@github.com:altamente-cloud/blog-ru.git`
 - **Force push**: Ensures clean deployment state
 - **Automatic branch creation**: Creates branches if they don't exist
 
 ## Language-Specific Configurations
-
-### Bulgarian (`bg/config.toml`):
-```toml
-languageCode = "bg"
-[menu]
-  [[menu.main]]
-    name = 'Начало'      # Home
-  [[menu.main]]  
-    name = "Статии"      # Articles
-  [[menu.main]]
-    name = "За сайта"    # About the site
-  [[menu.main]]
-    name = "По теми"     # By topics
-```
 
 ### Russian (`ru/config.toml`):
 ```toml
@@ -158,18 +129,12 @@ languageCode = "ru"
 
 ### 1. Local Development
 ```bash
-# Start development server for Bulgarian version
-./serve.sh bg
-
-# Start development server for Russian version  
+# Start development server for Russian version
 ./serve.sh ru
 ```
 
 ### 2. Build and Deploy
 ```bash
-# Build and deploy Bulgarian version
-./build-bg.sh
-
 # Build and deploy Russian version
 ./build-ru.sh
 ```
@@ -179,7 +144,7 @@ languageCode = "ru"
 ### Permission Issues
 If you get permission errors, make sure the scripts are executable:
 ```bash
-chmod +x serve.sh build-bg.sh build-ru.sh
+chmod +x serve.sh build-ru.sh
 ```
 
 ### Git Authentication
