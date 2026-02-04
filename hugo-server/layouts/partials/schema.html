@@ -1,0 +1,39 @@
+{{- /* JSON-LD Structured Data for SEO */ -}}
+{{- if .IsPage -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ .Title | jsonify }},
+  {{- if .Params.description }}
+  "description": {{ .Params.description | jsonify }},
+  {{- end }}
+  {{- if .Params.date }}
+  "datePublished": {{ .Date.Format "2006-01-02" | jsonify }},
+  {{- end }}
+  {{- if .Lastmod }}
+  "dateModified": {{ .Lastmod.Format "2006-01-02" | jsonify }},
+  {{- end }}
+  "url": {{ .Permalink | jsonify }},
+  {{- if .Params.image }}
+  "image": {{ .Params.image | absURL | jsonify }},
+  {{- end }}
+  "author": {
+    "@type": "Person",
+    "name": "Yuri Golub"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Yuri's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ "favicon.png" | absURL }}"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ .Permalink | jsonify }}
+  }
+}
+</script>
+{{- end -}}
