@@ -16,7 +16,7 @@ pygmentsUseClasses = true
     min = "0.55.0"
 
 [params]
-  google_analytics_id = ""
+  google_analytics_id = "G-NYTWXPLBV2"
   twitter_handle = "@VagrantRascal"
   showAuthorOnHomepage = true
   showAuthorOnPosts = false
