@@ -76,6 +76,15 @@ a.header-logo {
   color: var(--heading-color);
 }
 
+/* Summary specific spacing */
+.summary-title {
+  margin: 10px 0 !important;
+}
+
+.summary-description {
+  margin-top: 0 !important;
+}
+
 /* Clean, readable content */
 .content p,
 .intro p,
@@ -135,7 +144,8 @@ li code {
 
 /* Minimal summary cards */
 .summary {
-  padding-bottom: 20px;
+  padding-bottom: 15px;
+  margin-bottom: 20px !important;
   border-bottom: 1px solid #e1e4e8;
 }
 
@@ -160,7 +170,8 @@ li code {
 /* Simple date styling */
 .summary-date {
   color: #6a737d;
-  font-size: 14px;
+  font-size: 13px;
+  margin-bottom: 5px;
 }
 
 /* Minimal tag styling - unified for all tag locations */
