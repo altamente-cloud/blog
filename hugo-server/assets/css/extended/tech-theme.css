@@ -10,11 +10,11 @@ body {
 
 /* Minimal color scheme */
 :root {
-  --base-color: #ffffff !important;
+  --base-color: #f5f5f5 !important;
   --text-color: #24292e !important;
   --heading-color: #24292e !important;
   --highlight-color: #0000ee !important;
-  --base-offset-color: #f6f8fa !important;
+  --base-offset-color: #e8e8e8 !important;
   --dot-color: #0000ee !important;
 }
 
@@ -37,7 +37,7 @@ body.frame {
 .header {
   background: #c0c0c0;
   border: 2px solid;
-  border-color: #ffffff #808080 #808080 #ffffff;
+  border-color: #dfdfdf #808080 #808080 #dfdfdf;
   padding: 4px 8px;
   margin-bottom: 20px !important;
 }
@@ -72,7 +72,7 @@ a.header-logo {
   padding: 4px 12px;
   background: #c0c0c0;
   border: 2px solid;
-  border-color: #ffffff #808080 #808080 #ffffff;
+  border-color: #dfdfdf #808080 #808080 #dfdfdf;
   font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
   font-size: 13px;
   text-transform: uppercase;
@@ -82,15 +82,15 @@ a.header-logo {
 .menu-main > ul > li > a:hover {
   background: #d4d4d4;
   color: #0000ee;
-  border-color: #808080 #ffffff #ffffff #808080;
+  border-color: #808080 #dfdfdf #dfdfdf #808080;
 }
 
 .menu-main > ul > li.active > a {
-  background: #ffffff;
+  background: #e0e0e0;
   color: #000000;
-  border-color: #808080 #ffffff #ffffff #808080;
+  border-color: #808080 #dfdfdf #dfdfdf #808080;
   font-weight: 600;
-  box-shadow: inset 1px 1px 0 #808080, inset -1px -1px 0 #ffffff;
+  box-shadow: inset 1px 1px 0 #808080, inset -1px -1px 0 #dfdfdf;
 }
 
 /* Code-like headings */
