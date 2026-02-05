@@ -13,14 +13,14 @@ body {
   --base-color: #ffffff !important;
   --text-color: #24292e !important;
   --heading-color: #24292e !important;
-  --highlight-color: #0366d6 !important;
+  --highlight-color: #0000ee !important;
   --base-offset-color: #f6f8fa !important;
-  --dot-color: #0366d6 !important;
+  --dot-color: #0000ee !important;
 }
 
 /* Clean, minimal links */
 a {
-  color: #0366d6 !important;
+  color: #0000ee !important;
   text-decoration: none;
 }
 
@@ -33,35 +33,64 @@ body.frame {
   border: none !important;
 }
 
-/* Simple, minimal header */
+/* Windows 98-style header */
 .header {
-  border-bottom: 1px solid #e1e4e8;
-  padding-bottom: 15px;
-  margin-bottom: 30px !important;
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  padding: 4px 8px;
+  margin-bottom: 20px !important;
+}
+
+.header::before {
+  content: "[:::] ";
+  color: #000080;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 a.header-logo {
   text-decoration: none;
-  color: var(--heading-color);
+  color: #000000;
   font-weight: 600;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* Minimal menu styling */
+/* Windows 98-style menu buttons */
+.menu-main > ul {
+  display: flex;
+  gap: 4px;
+  margin-top: 8px;
+}
+
 .menu-main > ul > li > a {
-  color: var(--text-color);
+  color: #000000;
   text-decoration: none;
-  padding: 5px 10px;
+  padding: 4px 12px;
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .menu-main > ul > li > a:hover {
-  color: var(--highlight-color);
+  background: #000080;
+  color: #ffffff;
+  border-color: #808080 #ffffff #ffffff #808080;
 }
 
 .menu-main > ul > li.active > a {
-  color: var(--highlight-color);
+  background: #ffffff;
+  color: #000000;
+  border-color: #808080 #ffffff #ffffff #808080;
   font-weight: 600;
-  background: #f1f8ff;
-  border-radius: 3px;
+  box-shadow: inset 1px 1px 0 #808080, inset -1px -1px 0 #ffffff;
 }
 
 /* Code-like headings */
@@ -154,8 +183,8 @@ li code {
   text-align: center;
   color: #d1d5da;
   font-size: 14px;
-  margin-top: 35px;
-  margin-bottom: 35px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace !important;
 }
 
