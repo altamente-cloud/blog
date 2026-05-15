@@ -1,7 +1,6 @@
 ---
 title: Перцептронът - основа на невронните мрежи
 slug: perceptron-bg
-lang: bg
 date: 2025-05-23
 description: "Перцептронът - основа на невронните мрежи"
 image: images/perceptron/perceptron_header.png

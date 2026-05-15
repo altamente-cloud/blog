@@ -1,7 +1,6 @@
 ---
 title: Перцептрон - основа нейронных сетей
 slug: perceptron-ru
-lang: ru
 date: 2025-05-23
 description: "Перцептрон - фундамент машинного обучения и нейронных сетей"
 image: images/perceptron/perceptron_header.png

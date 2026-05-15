@@ -1,7 +1,6 @@
 ---
 title: Инструменти за ML - Python, Conda, Jupyter
 slug: conda-bg
-lang: bg
 date: 2025-01-17
 description: "Python, Conda, Jupyter - инструменти за работа с ML"
 image: images/conda-post.png

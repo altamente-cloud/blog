@@ -1,7 +1,6 @@
 ---
 title: Инструменты для ML - Python, Conda, Jupyter
 slug: conda-ru
-lang: ru
 date: 2025-01-17
 description: "Python, Conda, Jupyter - инструменты для работы с ML"
 image: images/conda-post.png
